@@ -132,16 +132,20 @@ header a:hover {
     visibility: hidden;
     transition: opacity 0.5s ease-in-out;
 }
+
+.items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 30px;
+}
+
 .items li {
-    float: none;
+    list-style: none;
 }
-.items{
-    text-align: center;
-    position: absolute;
-    left: 49%;
-    top: 40%;
-    transform: translate(-50%, -50%);
-}
+
 .items a {
     font-size: 30px;
     font-weight: bold;

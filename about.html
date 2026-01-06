@@ -3,170 +3,96 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="JayTechPH | Portfolio">
-    <meta name="keywords" content="JayTechPH, JayTechPH portfolio, portfolio developer, developer ">
-    <meta name="author" content="JayTechPH">
-    <link rel="shortcut icon" href="assets/img/icon.png" type="image/x-icon">
-    <title>JayTechPH | About</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <meta name="keywords" content="JayTechPH, JayTechPH portfolio, portfolio developer, developer, Ar Jay Pangilinan, Ar Jay Pangilinan Portfolio, Ar Jay Pangilinan New Portfolio">
+    <meta name="author" content="JayTechPH, Ar Jay Pangilinan, Ar Jay Pangilinan Portfolio, Ar Jay Pangilinan New Portfolio">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <title>JayTechPH</title>
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div class="square"></div>
-            <h1 class="name">Ar Jay Pangilinan</h1>
-            <p class="designation-m">PROGRAMMER</p>
-            <p class="designation">/ PROGRAMMER</p>
-            <nav>
-                <div class="overlay" id="overlay">
-                    <div class="items">
-                        <li class="current navbar"><a href="about">about me<br><br></a></li>
-                        <li><a href="https://github.com/JayTechPH" target="_blank">projects<br><br></a></li>
-                        <li><a href="contact">contact<br><br></a></li>
-                    </div>
-                </div>
-                <ul class="navbar-item">
-                    <li class="current navbar"><a href="about">about me</a></li>
-                    <li><a href="https://github.com/JayTechPH" target="_blank">projects</a></li>
-                    <li><a href="contact">contact</a></li>
-                </ul>
-                <div class="navbutton">
-                    <div class="navbar-button" onclick="toggleNavbar(this)">
-                        <div class="bar1"></div>
-                        <div class="bar2"></div>
-                        <div class="bar3"></div>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header>
-    <section id="showcase1">
-        <div class="background"></div>
-        <div class="set-1">
-            <div class="card-container">
-                <div class="card card-1">
-                    <div class="image-frame">
-                        <img src="assets/img/updated_profile.jpg">
-                    </div>
-                    <div class="card-name">
-                        <h1>
-                            Ar Jay<br>
-                            Pangilinan
-                        </h1>
-                    </div>
+    <audio id="bgMusic" src="soundtrack.mp3" autoplay loop muted></audio>
+    <div id="musicButton" class="music">
+        <img id="musicIcon" class="music_spritesheet" src="img/music_mute.png" alt="music icon">
+    </div>
 
-                    <div class="line">
-                        <p class="card-designation">PROGRAMMER</p>
-                    </div>
-                    <ul class="button-container-card">
-                        <li class="buttoncard-1">
-                            <a class="button-text" href="https://github.com/JayTechPH" target="_blank">projects</a>
-                        </li>
-                        <li class="buttoncard-2">
-                            <a class="button-text" href="contact.html">contact</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="card card-2">
-                    <div class="icon">
-                        <a href="https://www.facebook.com/arjay.pangilinan.165" target="_blank">
-                            <i class="fab fa-facebook-f card-icon"></i>
-                        </a>
-                        <a href="https://www.youtube.com/channel/UCTLdwwiagrI8-ESzGAO5e4A" target="_blank">
-                            <i class="fab fa-youtube card-icon"></i>
-                        </a>
-                        <a href="https://www.tiktok.com/@arjaypangilinan14" target="_blank">
-                            <i class="fab fa-tiktok card-icon"></i>
-                        </a>
-                        <a href="https://www.instagram.com/arjay.pangilinan.165/" target="_blank">
-                            <i class="fab fa-instagram card-icon"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
+    <div class="room">
+        <div class="trophy interactive" onclick="achievementClicked()">
+            <img class="trophy_spritesheet" src="img/trophy.png">
         </div>
-        <div class="set-2">
-            <div class="text-container">
-                <h2>Hello</h2>
-                <h1>Here's who I am & what I do</h1>
-            </div>
-            <ul class="button-container">
-                <li class="button-1">
-                    <a class="button-text" href="contact.html">contact</a>
-                </li>
-                <li class="button-2">
-                    <a class="button-text" href="https://github.com/JayTechPH" target="_blank">projects</a>
-                </li>
-            </ul>
-            <div class="about">
-                <p>
-                   I'm a BSIS student with a growing knowledge of programming. While I'm still learning
-                    languages like Python, C#, C, PHP, and JavaScript, my skills are developing gradually. I'm
-                    passionate about exploring these languages and expanding my knowledge. Feel free to connect if
-                    you'd like to discuss programming or collaborate on projects!
-                </p>
-            </div>
-
+        <div class="window interactive" onclick="windowClicked()">
+            <img class="window_spritesheet" src="img/window.png">
         </div>
-    </section>
-    <footer>
-        <ul class="follow">
-            <li class="label">Follow</li>
-            <li>
-                <a href="https://www.facebook.com/arjay.pangilinan.165" target="_blank">
-                    <i class="fab fa-facebook-f social-icon"></i>
-                </a>
-                <a href="https://www.youtube.com/channel/UCTLdwwiagrI8-ESzGAO5e4A" target="_blank">
-                    <i class="fab fa-youtube social-icon"></i>
-                </a>
-                <a href="https://www.tiktok.com/@arjaypangilinan14" target="_blank">
-                    <i class="fab fa-tiktok social-icon"></i>
-                </a>
-                <a href="https://www.instagram.com/arjay.pangilinan.165/" target="_blank">
-                    <i class="fab fa-instagram social-icon"></i>
-                </a>
-            </li>
+        <div class="desk interactive" onclick="deskClicked()">
+            <img class="desk_spritesheet" src="img/desk.png">
+        </div>
+        <div class="cat interactive" onclick="catClicked()">
+            <img class="cat_spritesheet" src="img/cat.png">
+        </div>
+        <div class="bookshelf interactive" onclick="bookshelfClicked()">
+            <img class="bookshelf_spritesheet" src="img/bookshelf.png">
+        </div>
+        <div class="telephone interactive" onclick="telephoneClicked()">
+            <img class="telephone_spritesheet" src="img/telephone.png">
+        </div>
+        <div class="image interactive" onclick="imageClicked()">
+            <img class="image_spritesheet" src="img/image.png">
+        </div>
+    </div>
+
+    <a class="old_portfolio" href="/old/" target="_blank" title="Visit my old portfolio!">
+        <img class="music_spritesheet" src="img/old_portfolio.png" alt="old portfolio">
+    </a>
+
+    <div class="contact" id="contact" style="display: none;">
+        <div class="close" onclick="closeClicked(this)">
+            X
+        </div>
+        <div class="socials">
+            <a href="https://www.facebook.com/arjay.pangilinan.165" target="_blank">
+                <img src="img/facebook.png" alt="facebook icon" class="social-icon">
+            </a>
+            <a href="https://www.instagram.com/jaay_pngilinn" target="_blank">
+                <img src="img/instagram.png" alt="instagram icon" class="social-icon">
+            </a>
+            <a href="https://github.com/JayTechPH" target="_blank">
+                <img src="img/github.png" alt="github icon" class="social-icon">
+            </a>
+            <a href="https://www.linkedin.com/in/arjaypangilinan165/" target="_blank">
+                <img src="img/linkedin.png" alt="linkedin icon" class="social-icon">
+            </a>
+        </div>
+    </div>
+
+    <div id="achievement" style="display: none;">
+        <div class="close" onclick="closeClicked(this)">
+            X
+        </div>
+        <h2>Achievement List!</h2>
+        <ul>
+            <li>Developed an AI-powered task management mobile app using React Native and Firebase.</li>
+            <li>Built a centralized information system for the Office of the Prosecutor to manage cases and hearings.</li>
+            <li>Created a phone recommendation web application focused on user needs and lifestyle.</li>
+            <li>Developed a Python-based Messenger bot with automated and AI-driven features.</li>
+            <li>Gained hands-on experience in administrative and government offices through internships.</li>
         </ul>
-        <ul class="write">
-            <li class="label">Write</li>
-            <li><a href="mailto:jaytechph0@gmail.com?body=" target="_blank">jaytechph0@gmail.com</a></li>
-        </ul>
-        <ul class="copyright">
-            <li>&copy; 2023 by JayTechPH.</li>
-            <li>Powered by <a href="https://github.com/JayTechPH" target="_blank">Github.</a></li>
-        </ul>
-    </footer>
+    </div>
+
+    <div id="frame" style="display: none;">
+        <div class="close" onclick="closeClicked(this)" style="color: white;">
+            X
+        </div>
+        <img src="img/frame.jpg" alt="self">
+    </div>
+
+    <div id="dialogue" class="dialogue">
+        <p id="dialogue-text" class="dialogue-text">Hello! Welcome to my portfolio! Click on the objects to interact.
+        </p>
+        <p class="dialogue-p"> Click to continue... </p>
+    </div>
+    <script src="script.js"></script>
 </body>
-
-<script>
-    var activeNavbar = false;
-
-    function toggleNavbar(x) {
-        activeNavbar = !activeNavbar;
-        x.classList.toggle("change");
-        var overlay = document.getElementById("overlay");
-        var navbaritem = document.getElementById("navbar-item");
-
-        if (activeNavbar) {
-            overlay.style.opacity = 1;
-            overlay.style.visibility = 'visible';
-            document.body.style.overflow = "hidden";
-            console.log("Navbar is active.");
-        } else {
-            overlay.style.opacity = 0;
-            setTimeout(function () {
-                overlay.style.visibility = 'hidden';
-            }, 500);
-            document.body.style.overflow = "";
-            console.log("Navbar is inactive.");
-        }
-    }
-</script>
 
 </html>

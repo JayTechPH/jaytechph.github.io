@@ -1,0 +1,231 @@
+body {
+    min-height: 100vh;
+    padding-top: 0.5vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-image: url('img/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    image-rendering: pixelated;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    line-height: 1.5em;
+}
+
+img {
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
+}
+
+.room {
+    width: 80vmin;
+    height: 80vmin;
+    background-image: url('img/room.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative; 
+}
+
+.trophy {
+    width: 30%;
+    top: 15%;
+    left: 13%;
+}
+
+.trophy_spritesheet {
+    width: 500%;
+    height: 100%;
+    animation: play 3s steps(5) infinite;
+}
+
+.window {
+    width: 30%;
+    top: 15%;
+    right: 13%;
+}
+
+.window_spritesheet {
+    width: 300%;
+    height: 100%;
+    animation: play 5s steps(3) infinite;
+}
+
+.desk {
+    width: 50%;
+    bottom: 9%;
+    left: 10%;
+}
+
+.desk_spritesheet {
+    width: 400%;
+    height: 100%;
+    animation: play 1.5s steps(4) infinite;
+}
+
+.cat {
+    width: 15%;
+    bottom: 22%;
+    right: 40%;
+}
+.cat_spritesheet {
+    width: 1000%;
+    height: 100%;
+    animation: play 3s steps(10) infinite;
+}
+
+.telephone {
+    width: 10%;
+    bottom: 27%;
+    right: 22%;
+}
+
+.telephone_spritesheet {
+    width: 300%;
+    height: 100%;
+    animation: play 2s steps(3) infinite;
+}
+
+.bookshelf {
+    width: 23%;
+    bottom: 9%;
+    right: 10%;
+}
+
+.bookshelf_spritesheet {
+    width: 100%;
+    height: 100%;
+}
+
+.image {
+    width: 10%;
+    bottom: 27%;
+    right: 11%;
+}
+
+.image_spritesheet {
+    width: 100%;
+    height: 100%;
+}
+
+.interactive {
+    overflow: hidden;
+    position: absolute;
+}
+
+.interactive:hover {
+    filter: drop-shadow(0.2vw 0 0 white)
+            drop-shadow(-0.2vw 0 0 white)
+            drop-shadow(0 0.2vw 0 white)
+            drop-shadow(0 -0.2vw 0 white);
+}
+
+.music {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+}
+
+.old_portfolio {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+}
+
+.music_spritesheet {
+    width: 6vw;
+}
+
+.dialogue {
+    width: 90%;
+    padding: 1vw 1vw 0 1vw;
+    height: fit-content;
+    background: white;
+    text-align: center;
+    bottom: 3%;
+    margin-top: 1vw;
+
+    border: 0.3px solid #fff;
+    image-rendering: pixelated;
+    box-shadow: 0 0 0 0.3vw #000, 0 0 0 0.6vw #fff;
+    border-radius: 2vw;
+}
+
+.dialogue-p {
+    margin-top: 1vw;
+    text-align: right;
+    font-size: 12px;
+    color: grey;
+}
+
+.contact {
+    position: absolute;
+    width: 80vmin;
+    padding: 2vw 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 0.3vw solid black;
+    border-radius: 2vw;
+}
+
+.socials {
+    display: flex;
+    gap: 2vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icon {
+    width: 6vw;
+    transition: filter 0.3s ease;
+}
+
+.socials a:hover {
+    filter: drop-shadow(0.3vw 0 0 #228AFE)
+            drop-shadow(-0.3vw 0 0 #228AFE)
+            drop-shadow(0 0.3vw 0 #228AFE)
+            drop-shadow(0 -0.3vw 0 #228AFE);
+}
+
+.close {
+    position: absolute;
+    top: 5%;
+    right: 2%;
+    cursor: pointer;
+    font-size: 2vw;
+}
+
+#achievement {
+    position: absolute;
+    width: 80vmin;
+    max-height: 80vmin;
+    background: white;
+    border: 0.3vw solid black;
+    border-radius: 2vw;
+    padding: 2vw;
+    overflow-y: auto; 
+}
+
+#frame {
+    position: absolute;
+    width: 53vmin;
+}
+
+#frame img {
+    width: 100%;
+    height: auto;
+    border: black 0.3vw solid;
+    border-radius: 2vw;
+}
+
+@keyframes play {
+    from { transform: translate3d(0, 0, 0); }
+    to { transform: translate3d(-100%, 0, 0); }
+}
